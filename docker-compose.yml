@@ -1,0 +1,16 @@
+## docker-compose portainer 
+version: '3'
+services:
+  portainer:
+    image: portainer/portainer-ce
+    container_name: Portainer
+    hostname: portainer
+    volumes:
+      - /srv/portainer/data:/data
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - 127.0.0.1:8000:8000
+      - 127.0.0.1:9000:9000
+    restart: unless-stopped
+#EOF
+
