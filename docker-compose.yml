@@ -2,8 +2,9 @@
 version: '3'
 services:
   portainer:
+    ## -ce is cummunity edition (no licence key?)
     image: portainer/portainer-ce
-    container_name: Portainer
+    container_name: portainer
     hostname: portainer
     volumes:
       - /srv/portainer/data:/data
